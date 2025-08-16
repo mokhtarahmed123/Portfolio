@@ -1,0 +1,220 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #1e1a17;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #3b2f2f, #1e1a17);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-text h1 span {
+  color: #d4a373;
+}
+
+.hero-text p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #ddd;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.profile-pic {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid #d4a373;
+  animation: zoomIn 2s ease-in-out;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #d4a373;
+  color: #1e1a17;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: bounceIn 2s ease-in-out;
+}
+
+.btn:hover {
+  background: #b07c55;
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 163, 115, 0.4);
+}
+
+.btn.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.social-links {
+  margin-top: 15px;
+  text-align: center;   /* يخليهم في النص */
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;             /* مسافة بين الأيقونة والنص */
+  color: #d7ccc8;       /* لون النص والأيقونة */
+  font-size: 18px;      /* حجم النص */
+  margin: 0 12px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-links a i {
+  font-size: 24px;      /* حجم الأيقونة */
+}
+
+.social-links a:hover {
+  color: #ffcc80;       /* يتغير عند الـ hover */
+  transform: scale(1.1);
+}
+
+/* ===== EDUCATION ===== */
+.education {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.education p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin: 0.5rem 0;
+}
+
+
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #d4a373;
+}
+
+/* ===== SKILLS ===== */
+.skill {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.skill span {
+  font-weight: bold;
+  display: block;
+}
+
+.progress {
+  background: #333;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress div {
+  height: 12px;
+  background: #d4a373;
+  animation: fillBar 2s ease forwards;
+}
+
+/* ===== PROJECTS ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #2a2521;
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #3e2e1e;  /* بني غامق */
+  color: #f5f5f5;
+  margin-top: 50px;
+}
+
+footer .social-links {
+  margin-top: 15px;
+}
+
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+}
